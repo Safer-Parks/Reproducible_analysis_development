@@ -1,4 +1,4 @@
-# Visbility analysis incorporating treeline
+# Visibility analysis incorporating treeline
 
 See [Visibility analysis notebook](../visability_analysis.ipynb) for work through.
 
