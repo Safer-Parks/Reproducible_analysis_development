@@ -1,5 +1,5 @@
-# import geopandas as gpd
-# from shapely.ops import unary_union
+import geopandas as gpd
+from shapely.ops import unary_union
 
 ### funciton that subsets a greenspace (or similar file) 
 # to only include greenspaces within a chosen local authority
