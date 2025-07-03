@@ -30,5 +30,5 @@ dependencies:
   # keep this to install your Python package locally
   - pip
   - pip:
-      - Pillow
+    - Pillow
     - --editable .

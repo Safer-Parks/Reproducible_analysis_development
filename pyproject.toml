@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "safer_parks"
+version = "0.1.0"
+description = "Brief description"
+authors = [{name = "Your Name"}]
+requires-python = ">=3.10"
+dependencies = [
+  "geopandas",
+  "shapely"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
