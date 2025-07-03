@@ -1,0 +1,34 @@
+name: parks-dev-env
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python
+  - pytest
+  - blackd
+  - isort
+
+  # remove/modify these as needed
+  - numpy
+  - pandas
+  - geopandas
+  - osmnx=1.9.4
+  - networkx
+  - shapely
+  - bs4
+  - requests
+  - lat_lon_parser
+  - folium
+  - rasterio
+  - matplotlib
+  - fiona
+  - jupyter
+
+
+  # keep this to install your Python package locally
+  - pip
+  - pip:
+      - Pillow
+    - --editable .
