@@ -1,5 +1,5 @@
-# this environment uses a new version of osmnx, note some functions are depreciated
-name: park-safety-env
+# this environment uses an old version of osmnx for compatibility
+name: parks-dev-env-old
 
 channels:
   - conda-forge
@@ -15,7 +15,7 @@ dependencies:
   - numpy
   - pandas
   - geopandas
-  - osmnx
+  - osmnx=1.9.4
   - networkx
   - shapely
   - bs4
@@ -32,4 +32,4 @@ dependencies:
   - pip
   - pip:
     - Pillow
-    - --editable .
+    # - --editable .
