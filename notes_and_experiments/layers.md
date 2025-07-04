@@ -5,6 +5,7 @@
 - Each layer includes thematic tags that might be useful for ordering in the legend.
 - Sub-bulletpoints are **not** extra layers, they are just clarification.
 - The order they are shown in below doesn't imply the order they will be visible in on the legend, we can rearrange or re-order as needed.
+- For heatmaps: these are scaled *within the park* between 0-1 (e.g. for visibility etc.) because they do not make sense for comparison across parks.
 
 ## Layers
 
