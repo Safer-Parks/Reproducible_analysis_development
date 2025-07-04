@@ -2,6 +2,7 @@ from shapely import Point, LineString, remove_repeated_points, unary_union
 import numpy as np
 import matplotlib.pyplot as plt
 import osmnx as ox
+import geopandas as gpd
 
 def interpolated(G, park_polygon):
     entrance_points = []
@@ -38,3 +39,24 @@ def tagged(location):
 
     print(f"Found {len(entrance_points_tag)} explicitly tagged entrance nodes.")
     return entrance_points_tag
+
+def plot(G, interp_points="na", tagged_points="na"):
+    fig, ax = ox.plot_graph(
+        G,
+        node_color='gray',
+        node_size=10,
+        show=False,
+        close=False
+    )
+
+    if not interp_points == "na":
+        xs = [pt.x for pt in interp_points.geoms]
+        ys = [pt.y for pt in interp_points.geoms]
+        ax.scatter(xs, ys, c='magenta', s=40, marker='x', label=f'Deduplicated interpolated entrances (N={len(xs)})', zorder=4)
+
+    if isinstance(tagged_points, gpd.GeoDataFrame):
+        xs = tagged_points.geometry.x
+        ys = tagged_points.geometry.y
+        ax.scatter(xs, ys, c='yellow', s=200, alpha=0.7, marker='*', label=f'OSM-tagged Entrances (N={len(xs)})', zorder=4)
+    ax.legend()
+    return fig, ax
