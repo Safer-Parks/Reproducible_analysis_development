@@ -13,7 +13,6 @@ def basic_boundary(location = "Peel Park, Bradford, UK"):
     return park_polygon
 
 # more complex park boundary calculation
-
 def park_greenspace_boundary():
     pass
 
@@ -21,3 +20,4 @@ def buffer_network(park_polygon, buffer_m=0.001, type="walk"):
     network_buffer = park_polygon.buffer(buffer_m)
     G = ox.graph_from_polygon(network_buffer, network_type=type)
     return G
+

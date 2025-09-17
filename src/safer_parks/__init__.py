@@ -5,3 +5,7 @@ from . import entrances
 # This should hopefully make it easier to swap out the boundary function in future
 # for more complex function
 from .bounds import basic_boundary as park_polygon
+
+# Importing utility functions
+
+from .utilities import merge_touching_or_intersecting_polygons_condense as merge
